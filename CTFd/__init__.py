@@ -6,6 +6,7 @@ import weakref
 from distutils.version import StrictVersion
 
 import jinja2
+from plugins.multiple_choice import load as load_multiple_choice
 from flask import Flask, Request
 from flask_babel import Babel
 from flask_migrate import upgrade
@@ -323,5 +324,5 @@ def create_app(config="CTFd.config.Config"):
         init_events(app)
         init_plugins(app)
         init_cli(app)
-
+        load_multiple_choice(app)
         return app
