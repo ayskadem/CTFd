@@ -69,4 +69,3 @@ def load(app):
     upgrade(plugin_name="multiple_choice")
     challenges.CHALLENGE_CLASSES["multiple_choice"] = MultipleChoiceChallenge
     register_plugin_assets_directory(app, base_path="/plugins/multiple_choice/assets/")
-    
